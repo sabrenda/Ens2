@@ -124,4 +124,7 @@ contract Ens {
     function withdraw() public onlyOwner {
         payable(owner).transfer(address(this).balance);
     }
+
+    fallback() external payable { }
+    receive() external payable { }
 }
